@@ -9,7 +9,7 @@ var map = L.map('map', {
     center: [41.4081232,2.17089],
     zoom: 15,
     minZoom: 14,
-    maxZoom: 17,
+    maxZoom: 16,
     maxBounds: bounds,
 });
 
