@@ -46,7 +46,7 @@ var watchProcess = null;
 function init_watch_position() {
     //document.getElementById("centrar").innerHTML = "<p>Locating...</p>";
  
-    var geo_options = {enableHighAccuracy:true, maximumAge:30000, timeout:27000};
+    var geo_options = {enableHighAccuracy:true, maximumAge:30000, timeout:27000, setView: false};
  
     if (navigator.geolocation) {
         // geolocation IS available
