@@ -51,7 +51,7 @@ function init_watch_position() {
     if (navigator.geolocation) {
         // geolocation IS available
         if (watchProcess == null) {  
-            watchProcess = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);  
+            
         }  
     } else {
         // geolocation IS NOT available
