@@ -39,7 +39,7 @@ var importante = L.icon({
 });
 
 //mi ubicacion
-marker = L.marker([41.4081232,2.17089], {icon: puntero}).addTo(map).bindPopup("<h1>Usted esta aquí</h1>");
+marker = L.marker([41.4081232,2.17089], {icon: puntero});
 
 var watchProcess = null;
  
@@ -51,7 +51,7 @@ function init_watch_position() {
     if (navigator.geolocation) {
         // geolocation IS available
         if (watchProcess == null) {  
-            
+            watchProcess = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);  
         }  
     } else {
         // geolocation IS NOT available
@@ -74,7 +74,7 @@ function geo_success(position) {
 
 // document.getElementById("centrar").innerHTML = '<p>Latitude: ' + latitude + '&deg;<br>Longitude: ' + longitude + '&deg;<br>Accuracy: ' + accuracy + ' m</p>';
 	
-	marker = L.marker([position.coords.latitude,position.coords.longitude], {icon: puntero}, {draggable: true}).addTo(map).bindPopup("<h2>Usted esta aquí</h2>");
+	marker = L.marker([position.coords.latitude,position.coords.longitude], {icon: puntero}, {draggable: true}).addTo(map);
 	marker.openPopup();
 	
 	setTimeout(function() {
