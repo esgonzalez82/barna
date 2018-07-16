@@ -1,7 +1,7 @@
 // delimitar el mapa
 //var corner1 = L.latLng(41.416444, 2.117488);//topLeft
-var corner1 = L.latLng(41.42921, 2.07461); 
-corner2 = L.latLng(41.328847, 2.232844);//bottomRight
+var corner1 = L.latLng(40.4466, -3.7218); 
+corner2 = L.latLng(40.3939, -3.6703);//bottomRight
 bounds = L.latLngBounds(corner1, corner2);
 
 //centrar el mapa
